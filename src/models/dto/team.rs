@@ -3,47 +3,47 @@ use serde::Serialize;
 #[derive(Debug, Serialize)]
 #[serde(rename_all = "camelCase")]
 pub struct TeamDto {
-    all_star_status: String,
-    id: i32,
-    name: String,
-    link: String,
-    venue: VenueDto,
-    team_code: String,
-    file_code: String,
-    abbreviation: String,
-    team_name: String,
-    location_name: String,
-    first_year_of_play: String,
-    league: LeagueDto,
-    sport: SportDto,
-    short_name: String,
-    parent_org_name: String,
-    parent_org_id: i32,
-    franchise_name: String,
-    club_name: String,
-    active: bool,
+    pub all_star_status: String,
+    pub id: i32,
+    pub name: String,
+    pub link: String,
+    pub venue: TeamVenueDto,
+    pub team_code: String,
+    pub file_code: String,
+    pub abbreviation: String,
+    pub team_name: String,
+    pub location_name: String,
+    pub first_year_of_play: String,
+    pub league: TeamLeagueDto,
+    pub sport: TeamSportDto,
+    pub short_name: String,
+    pub parent_org_name: String,
+    pub parent_org_id: i32,
+    pub franchise_name: String,
+    pub club_name: String,
+    pub active: bool,
 }
 
 #[derive(Debug, Serialize)]
 #[serde(rename_all = "camelCase")]
 pub struct TeamVenueDto {
-    id: i32,
-    name: String,
-    link: String,
+    pub id: i32,
+    pub name: String,
+    pub link: String,
 }
 
 #[derive(Debug, Serialize)]
 #[serde(rename_all = "camelCase")]
 pub struct TeamLeagueDto {
-    id: i32,
-    name: String,
-    link: String,
+    pub id: i32,
+    pub name: String,
+    pub link: String,
 }
 
 #[derive(Debug, Serialize)]
 #[serde(rename_all = "camelCase")]
 pub struct TeamSportDto {
-    id: i32,
-    link: String,
-    name: String,
+    pub id: i32,
+    pub link: String,
+    pub name: String,
 }
